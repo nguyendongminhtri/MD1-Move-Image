@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <style>-->
+<!--        .image {-->
+<!--            left: 100px;-->
+<!--            position: relative;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+
+<body>
+<img style="position: relative; left: 500px"  id="myImage" class="image" src="image/47378529_536486050149275_8974060236272828416_n.jpg" height="200" width="200"/><br>
+<button onclick="remove()">Move!</button>
+<script>
+    let image;
+function init(){
+    image = document.getElementById('myImage');
+    image.style.position = 'relative';
+    image.style.left = '100px';
+}
+window.onload = init;
+function remove(){
+    image.style.left =parseInt(image.style.left) + 10+ 'px';
+    console.log('move --> ', image.style.left)
+}
+
+</script>
+</body>
+</html>
